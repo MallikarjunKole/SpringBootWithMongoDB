@@ -2,9 +2,13 @@ package com.example.mongodb.repository;
 
 import com.example.mongodb.entity.Order;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public interface OrderRepository extends MongoRepository<Order, String> {
+@Repository
+public interface OrderRepository extends ReactiveMongoRepository<Order, String> {
+
 
 }
